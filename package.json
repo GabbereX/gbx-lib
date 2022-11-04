@@ -1,0 +1,52 @@
+{
+  "name": "gbx-lib",
+  "version": "0.0.1",
+  "description": "React library components",
+  "main": "./dist/index.js",
+  "scripts": {
+    "pub": "webpack && npm version patch && npm publish",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabbereX/gbx-lib.git"
+  },
+  "keywords": [],
+  "author": "GabbereX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabbereX/gbx-lib/issues"
+  },
+  "homepage": "https://github.com/GabbereX/gbx-lib#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "0.0.13",
+    "@types/react": "^18.0.24",
+    "babel-loader": "^8.3.0",
+    "css-loader": "^6.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {}
+}
