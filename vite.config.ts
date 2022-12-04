@@ -10,6 +10,7 @@ export default defineConfig({
       insertTypesEntry: true,
     }),
   ],
+
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
@@ -27,5 +28,5 @@ export default defineConfig({
         },
       },
     },
-  },
-});
+  }
+})

@@ -1,7 +1,11 @@
-import { ReactElement } from 'react'
+import { DetailedHTMLProps, ButtonHTMLAttributes, HTMLAttributes } from 'react'
+import { TSizes, TTheme } from '@src/types'
 
-export interface IButtonProps {
-	children: ReactElement
-	theme?: 'small' | 'large' | 'big'
-	size?: 'small' | 'large' | 'big'
+export interface IButtonProps  {
+	text?: string
+	theme?: TTheme
+	size?: TSizes
+	borderRadius?: number
+	buttonProps?: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+	textProps?: DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>
 }

@@ -1,14 +1,39 @@
-import React, { FC } from 'react'
-import './styles.css'
+import React, { CSSProperties, FC } from 'react'
+
 import { IButtonProps } from './types'
 
-const Button: FC<IButtonProps> = ({ children, ...props }) => {
+import './Button.scss'
+
+const Button: FC<IButtonProps> = (props) => {
+	const {
+		theme,
+		size,
+		text,
+		borderRadius,
+		buttonProps,
+		textProps
+	} = props
+
+	const buttonStyles = (): CSSProperties => {
+		const style: CSSProperties = {}
+
+		borderRadius && (style.borderRadius = borderRadius)
+
+	  return style
+	}
+
+
 	return (
 		<button
 			className='button'
-			{ ...props }
+			style={ buttonStyles() }
+			{ ...buttonProps }
 		>
-			{ children }
+			<span
+				{ ...textProps }
+			>
+				{ text }
+			</span>
 		</button>
 	)
 }

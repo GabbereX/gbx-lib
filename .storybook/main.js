@@ -1,3 +1,6 @@
+const path = require('path')
+const { mergeConfig } = require('vite')
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -14,5 +17,23 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
-  }
+  },
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          '@src': path.resolve(__dirname, '../src')
+        }
+      },
+  
+      css: {
+        postcss: null,
+        preprocessorOptions: {
+          scss: {
+            additionalData: `@import "../src/styles/styles.scss";`
+          },
+        },
+      },
+    })
+  },
 }
