@@ -31,9 +31,9 @@ module.exports = {
         preprocessorOptions: {
           scss: {
             additionalData: `@import "../src/styles/styles.scss";`
-          },
-        },
-      },
+          }
+        }
+      }
     })
-  },
+  }
 }
