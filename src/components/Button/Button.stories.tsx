@@ -1,11 +1,11 @@
 import React from 'react'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import Button from './'
+import Button from './Button'
 import { ETheme } from '@src/consts'
 
 export default {
-	title: 'Example/Button',
+	title: 'Components/Button',
 	component: Button,
 } as ComponentMeta<typeof Button>;
 
@@ -17,7 +17,9 @@ Primary.args = {
 	text: 'Click Me',
 	theme: ETheme.BRAND,
 	borderRadius: 10,
-	buttonProps: {
-		onClick: () => console.log('Click!'),
-	}
+	disabled: false,
+	// buttonProps: {
+	// 	onClick: () => console.log('Click!'),
+	// }
+	onClick: () => console.log('Click!')
 }
